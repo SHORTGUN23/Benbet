@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#081225">
+<title>BENBET — Sports & Games</title>
+<style>
+:root{--bg:#071020;--panel:#101d33;--panel2:#152540;--blue:#31a8ff;--cyan:#55e6ff;--text:#f4f8ff;--muted:#aab8cf;--green:#35d49a;--border:#263957}
+*{box-sizing:border-box}body{margin:0;background:linear-gradient(160deg,#081225,#050a14 70%);color:var(--text);font:16px/1.5 system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif}
+header{position:sticky;top:0;z-index:3;background:#071020ed;border-bottom:1px solid var(--border);backdrop-filter:blur(12px)}
+.wrap{max-width:1100px;margin:auto;padding:0 18px}.nav{min-height:70px;display:flex;align-items:center;justify-content:space-between;gap:16px}
+.logo{font-weight:950;font-size:1.4rem;letter-spacing:.5px}.logo span{color:var(--cyan)}nav{display:flex;gap:18px;flex-wrap:wrap}nav a{color:var(--muted);text-decoration:none;font-weight:650}nav a:hover{color:white}
+.btn{display:inline-flex;align-items:center;justify-content:center;border:0;border-radius:10px;padding:12px 17px;font-weight:800;cursor:pointer;text-decoration:none}
+.primary{background:linear-gradient(90deg,var(--blue),var(--cyan));color:#04101d}.secondary{background:var(--panel2);border:1px solid var(--border);color:white}
+.hero{padding:52px 0 28px}.hero-grid{display:grid;grid-template-columns:1.25fr .75fr;gap:22px;align-items:stretch}
+.card{background:linear-gradient(145deg,#12213a,#0d1729);border:1px solid var(--border);border-radius:20px;padding:26px;box-shadow:0 18px 55px #0003}
+.eyebrow{color:var(--cyan);font-size:.8rem;font-weight:900;letter-spacing:2px;text-transform:uppercase}
+h1{font-size:clamp(2.1rem,5vw,4rem);line-height:1.03;margin:12px 0 15px}h2{margin:0 0 12px;font-size:1.5rem}p{color:var(--muted)}.hero p{max-width:620px;font-size:1.05rem}
+.pills{display:flex;gap:8px;flex-wrap:wrap;margin:22px 0}.pill{background:#1a2b45;border:1px solid #304765;border-radius:99px;padding:7px 12px;font-size:.85rem;font-weight:700}
+.stat{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:20px}.stat div{background:#0a1425;border:1px solid var(--border);padding:14px;border-radius:12px}.stat strong{display:block;font-size:1.15rem}.stat small{color:var(--muted)}
+section{padding:20px 0 30px}.section-head{display:flex;align-items:end;justify-content:space-between;gap:15px;margin-bottom:14px}.section-head p{margin:0}
+.matches{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.match{background:var(--panel);border:1px solid var(--border);border-radius:15px;padding:18px}.league{font-size:.75rem;color:var(--cyan);font-weight:800;text-transform:uppercase;letter-spacing:1px}.teams{font-weight:800;margin:13px 0}.odds{display:flex;gap:8px}.odd{flex:1;text-align:center;background:#1c2c46;border:1px solid #344b6c;border-radius:9px;padding:9px 4px;color:white;font-weight:800;cursor:pointer}.odd.selected{outline:2px solid var(--cyan);background:#173a52}
+.deposit-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}.address{font:700 .93rem/1.5 ui-monospace,SFMono-Regular,Consolas,monospace;overflow-wrap:anywhere;background:#060d19;border:1px solid #304461;padding:14px;border-radius:10px;color:#fff;margin:10px 0}
+.warning{border-left:4px solid #ffbd4a;background:#2a2114;color:#ffe5b0;padding:13px 15px;border-radius:8px;margin:15px 0}.warning p{color:#ffe5b0;margin:4px 0}
+label{display:block;font-size:.9rem;font-weight:700;margin:13px 0 6px}input,select{width:100%;padding:12px 13px;background:#071020;border:1px solid #304461;color:white;border-radius:10px;font:inherit}
+.notice{font-size:.87rem;color:var(--muted)}.casino-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.game{padding:22px 18px;text-align:center;background:linear-gradient(145deg,#142744,#0d1729);border:1px solid var(--border);border-radius:15px}.emoji{font-size:2rem}
+footer{margin-top:30px;border-top:1px solid var(--border);padding:25px 0 40px;color:var(--muted);font-size:.85rem}
+.toast{position:fixed;bottom:20px;left:50%;transform:translateX(-50%);background:#e9fff7;color:#063b2b;padding:12px 18px;border-radius:10px;font-weight:800;display:none;z-index:9;box-shadow:0 8px 30px #0007}
+@media(max-width:760px){.hero-grid,.deposit-grid{grid-template-columns:1fr}.matches,.casino-grid{grid-template-columns:1fr}.nav{align-items:flex-start;padding:15px 0;flex-direction:column}nav{gap:12px}.hero{padding-top:25px}.card{padding:20px}}
+</style>
+</head>
+<body>
+<header><div class="wrap nav"><div class="logo">BEN<span>BET</span></div><nav><a href="#sports">Sports</a><a href="#games">Games</a><a href="#deposit">Deposit USDT</a></nav><a class="btn primary" href="#deposit">Deposit</a></div></header>
+<main class="wrap">
+<section class="hero"><div class="hero-grid">
+<div class="card"><div class="eyebrow">Sports • Casino • Virtual</div><h1>Play smart.<br><span style="color:var(--cyan)">Stay in control.</span></h1><p>A mobile-friendly sports and games website concept. Match odds and game tiles below are examples only and are not live betting markets.</p><div class="pills"><span class="pill">⚽ Football</span><span class="pill">🎰 Casino</span><span class="pill">🏁 Virtual games</span><span class="pill">₮ USDT TRC20</span></div><a class="btn primary" href="#sports">Explore matches</a> <a class="btn secondary" href="#deposit">Deposit details</a></div>
+<div class="card"><div class="eyebrow">Wallet information</div><h2>USDT deposits</h2><p>Network: <strong style="color:white">TRON (TRC20)</strong></p><div class="stat"><div><small>Minimum deposit</small><strong>10 USDT</strong></div><div><small>Network</small><strong>TRC20</strong></div></div><p class="notice">This static site cannot detect transactions, create user accounts, or credit balances automatically.</p></div>
+</div></section>
+<section id="sports"><div class="section-head"><div><div class="eyebrow">Sportsbook preview</div><h2>Featured football</h2></div><p>Sample odds • Demo only</p></div>
+<div class="matches">
+<div class="match"><div class="league">Example League</div><div class="teams">Manchester Blue<br>vs<br>London Red</div><div class="odds"><button class="odd">1<br>2.10</button><button class="odd">X<br>3.20</button><button class="odd">2<br>2.85</button></div></div>
+<div class="match"><div class="league">Example League</div><div class="teams">City United<br>vs<br>Rovers FC</div><div class="odds"><button class="odd">1<br>1.95</button><button class="odd">X<br>3.40</button><button class="odd">2<br>3.10</button></div></div>
+<div class="match"><div class="league">Example League</div><div class="teams">Athletic Club<br>vs<br>Sporting Stars</div><div class="odds"><button class="odd">1<br>2.45</button><button class="odd">X<br>3.05</button><button class="odd">2<br>2.60</button></div></div>
+</div><p class="notice">Clicking odds only highlights a selection. No bet is placed and no money is accepted by this page.</p></section>
+<section id="games"><div class="eyebrow">More entertainment</div><h2>Casino & virtual games</h2><div class="casino-grid"><div class="game"><div class="emoji">🎰</div><h3>Slots</h3><p>Game tile preview</p></div><div class="game"><div class="emoji">🃏</div><h3>Card games</h3><p>Game tile preview</p></div><div class="game"><div class="emoji">🏎️</div><h3>Virtual racing</h3><p>Game tile preview</p></div></div></section>
+<section id="deposit"><div class="eyebrow">Wallet funding</div><h2>Deposit USDT (TRC20)</h2><div class="deposit-grid">
+<div class="card"><h3>Send USDT to this address</h3><p>Only send <strong style="color:white">USDT using the TRON (TRC20) network</strong>.</p><div class="address" id="wallet">TQAtrLnHvEAqw9CkPrMf2ZM8tcEBmrSkMp</div><button class="btn primary" id="copyBtn">Copy deposit address</button><div class="stat"><div><small>Minimum amount</small><strong>10 USDT</strong></div><div><small>Network</small><strong>TRON / TRC20</strong></div></div><div class="warning"><strong>Important</strong><p>Do not send USDT from ERC20, BEP20, or another network to this TRC20 address. A wrong-network transfer may be lost. Check the address and network in your wallet before confirming.</p></div></div>
+<div class="card"><h3>Deposit record (manual demo)</h3><p>After sending, you can write down the transaction hash for your own reference. This form does not verify payments or credit an account.</p><form id="depositForm"><label for="amount">Amount sent (USDT)</label><input id="amount" type="number" min="10" step="0.01" placeholder="Minimum 10 USDT" required><label for="txid">Transaction hash (TXID)</label><input id="txid" type="text" minlength="8" placeholder="Paste transaction hash" required><label for="network">Network used</label><select id="network"><option value="TRC20">TRON (TRC20)</option><option value="other">Other network</option></select><p class="notice">This demo only checks the amount and selected network in your browser. It does not submit information to a server.</p><button class="btn primary" type="submit">Check entry</button></form><p id="formMsg" class="notice" role="status"></p></div>
+</div></section>
+</main>
+<footer><div class="wrap"><strong>BENBET — website prototype</strong><p>This is a static front-end prototype, not a functioning gambling operator. No login, account database, live odds, automated deposit detection, withdrawal system, or real-money betting is connected. Before accepting deposits or offering gambling, obtain the required licences for every market you serve, confirm you have the right to use the brand, and arrange secure backend, payment monitoring, customer support, age checks, anti-fraud controls, and responsible-gambling safeguards. Never promise a balance credit based only on a submitted TXID.</p><p>Gamble responsibly. Adults only. Local laws apply.</p></div></footer>
+<div class="toast" id="toast">Address copied</div>
+<script>
+document.querySelectorAll('.odd').forEach(b=>b.addEventListener('click',()=>{b.classList.toggle('selected')}));
+const toast=document.getElementById('toast');
+document.getElementById('copyBtn').addEventListener('click',async()=>{const address=document.getElementById('wallet').textContent.trim();try{await navigator.clipboard.writeText(address);toast.textContent='Deposit address copied';}catch(e){const r=document.createRange();r.selectNodeContents(document.getElementById('wallet'));const s=window.getSelection();s.removeAllRanges();s.addRange(r);toast.textContent='Select and copy the highlighted address';}toast.style.display='block';setTimeout(()=>toast.style.display='none',2500)});
+document.getElementById('depositForm').addEventListener('submit',e=>{e.preventDefault();const amount=Number(document.getElementById('amount').value);const network=document.getElementById('network').value;const msg=document.getElementById('formMsg');if(amount<10){msg.textContent='Minimum deposit is 10 USDT.';return}if(network!=='TRC20'){msg.textContent='Please use TRON (TRC20). This entry has not been accepted.';return}msg.textContent='Entry checked in this browser only. No payment was verified and no account balance was credited.';});
+</script>
+</body></html>
